@@ -1,4 +1,4 @@
-# 🎄 My Solutions for Advent of Code 🌟
+# 🎄 My Solutions to Advent of Code! 🌟
 
 This repository contains my personal solutions for the [Advent of Code 2023](https://adventofcode.com/2023) challenges, written in Rust, and soon adding in C.
 
