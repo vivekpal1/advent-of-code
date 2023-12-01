@@ -20,4 +20,7 @@ PROJECT_PATH="$BASE_DIR/$YEAR/$DAY"
 
 cargo new "$PROJECT_PATH"
 
+# Remove the .git directory created by cargo
+rm -rf "$PROJECT_PATH/.git"
+
 echo "Created Rust project for $YEAR - $DAY"
