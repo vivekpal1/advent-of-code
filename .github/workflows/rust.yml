@@ -16,7 +16,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+
+    - name: Find and Test All Rust Projects
+      run: |
+        for project in $(find . -name 'Cargo.toml' | sed 's|/Cargo.toml||'); do
+          echo "Testing project in $project"
+          (
+            cd $project
+            cargo build --verbose
+            cargo test --verbose
+          )
+        done
