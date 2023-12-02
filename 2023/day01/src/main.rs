@@ -1,18 +1,11 @@
-use std::env;
 use std::fs;
 use std::process;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    let input = if args.len() > 1 {
-        fs::read_to_string(&args[1]).unwrap_or_else(|_| {
-            eprintln!("Failed to read input file: {}", &args[1]);
-            process::exit(1);
-        })
-    } else {
-        // Default input
-        String::from("1abc2\npqr3stu8vwx\na1b2c3d4e5f\ntreb7uchet")
-    };
+    let input = fs::read_to_string("./src/input.txt").unwrap_or_else(|_| {
+        eprintln!("Failed to read input file: ./src/input.txt");
+        process::exit(1);
+    });
 
     let sum = calculate_sum(&input);
     println!("Total sum of calibration values: {}", sum);
