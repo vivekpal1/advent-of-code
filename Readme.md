@@ -34,7 +34,7 @@ AdventOfCode/
 To add a new day's directory and initialize solutions:
 
 ```bash
-chmod +x add_day.sh  # Only needed once to make the script executable
+chmod +x add.sh
 
 ./add.sh <year> <day>
 ```
@@ -44,7 +44,7 @@ chmod +x add_day.sh  # Only needed once to make the script executable
 To compile and run a solution for a specific day:
 
 ```bash
-chmod +x run_day.sh  # Only needed once to make the script executable
+chmod +x run.sh
 
 ./run.sh <year> <day>
 ```
